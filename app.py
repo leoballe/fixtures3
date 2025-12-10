@@ -202,4 +202,6 @@ def export_pdf() -> any:
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    import os
+    port = int(os.environ.get('PORT', 3000))  # usa 3000 por defecto si no hay PORT definido
+    app.run(host='0.0.0.0', port=port, debug=True)

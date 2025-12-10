@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Fixtures Deportivos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Generador de Fixtures Deportivos</h1>
+
+  <section id="config" class="config">
+    <div class="form-row">
+      <label for="teams_file">Archivo de equipos (CSV):</label>
+      <input type="file" id="teams_file" accept=".csv">
+      <button id="upload-btn">Cargar Equipos</button>
+    </div>
+    <div class="form-row">
+      <label for="system">Sistema:</label>
+      <select id="system">
+        <option value="8x3">8x3</option>
+        <option value="4x6">4x6</option>
+        <option value="rr">Round Robin</option>
+      </select>
+      <label for="home_and_away">
+        <input type="checkbox" id="home_and_away"> Ida y vuelta
+      </label>
+    </div>
+    <div class="form-row">
+      <label for="days">Días:</label>
+      <input type="number" id="days" value="5" min="1">
+      <label for="fields">Canchas:</label>
+      <input type="number" id="fields" value="2" min="1">
+      <label for="match_duration">Duración (min):</label>
+      <input type="number" id="match_duration" value="60" min="1">
+    </div>
+    <div class="form-row">
+      <label for="start_time">Inicio:</label>
+      <input type="time" id="start_time" value="09:00">
+      <label for="end_time">Fin:</label>
+      <input type="time" id="end_time" value="18:00">
+      <label for="midday_break">Pausa mediodía:</label>
+      <input type="text" id="midday_break" placeholder="12:00,14:00">
+    </div>
+    <div class="form-row">
+      <button id="generate-btn">Generar horarios y partidos</button>
+    </div>
+  </section>
+
+  <div class="container">
+    <div id="match-list" class="match-list">
+      <h2>Partidos</h2>
+      <p class="placeholder">Importe equipos y genere para ver los partidos.</p>
+    </div>
+    <div id="schedule-container" class="schedule-container">
+      <h2>Horarios</h2>
+      <p class="placeholder">Genere horarios para ver la tabla.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

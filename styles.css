@@ -1,0 +1,124 @@
+/* Estilos básicos para el generador de fixtures */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdfdfd;
+  color: #333;
+}
+
+h1 {
+  margin: 0;
+  padding: 20px;
+  background-color: #004080;
+  color: white;
+  text-align: center;
+}
+
+.config {
+  background-color: #eef2fa;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 1px solid #ccd6eb;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+}
+
+.match-list {
+  flex: 0 0 25%;
+  max-height: 75vh;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #fafafa;
+}
+
+.match-list h2 {
+  margin-top: 0;
+}
+
+.schedule-container {
+  flex: 1;
+  overflow-x: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #fafafa;
+}
+
+.schedule-container h2 {
+  margin-top: 0;
+}
+
+.match-card {
+  background-color: #eaeaea;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 6px;
+  margin-bottom: 6px;
+  cursor: grab;
+  user-select: none;
+}
+
+.match-card:active {
+  cursor: grabbing;
+}
+
+.placeholder {
+  color: #666;
+  font-style: italic;
+}
+
+table.schedule-day {
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table.schedule-day caption {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+table.schedule-day th,
+table.schedule-day td {
+  border: 1px solid #999;
+  padding: 4px;
+  text-align: center;
+  width: 100px;
+  height: 50px;
+  overflow: hidden;
+}
+
+table.schedule-day th {
+  background-color: #dde6f7;
+}
+
+td.timeslot {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+td.timeslot.filled {
+  background-color: #cfe8cf;
+  color: #003300;
+  font-weight: bold;
+}
